@@ -46,7 +46,7 @@
     dlg.hidden = false;
     dlg.innerHTML = '';
     dlg.append(...[
-      el('header', { class: 'menu-head' }, [el('h1', { text: 'Маленькая злая книга' }), el('p', { text: 'Книга первая. ' + BOOK.title })]),
+      el('header', { class: 'menu-head' }, [el('h1', { text: 'Не читай меня!' }), el('p', { text: 'Книга первая. ' + BOOK.title })]),
       el('div', { class: 'menu-row' }, [
         el('button', { class: 'btn primary big', text: 'Продолжить чтение', onclick: () => { SND.play('page'); go(S.page); } }),
         el('button', { class: 'btn', text: 'Начать сначала', onclick: () => confirmBox('Начать книгу сначала? Найденные буквы и страницы забудутся, а книга снова уснёт под пылью.', () => { const p = S.players; S = fresh(); S.players = p; save(); showDesk(); }) }),
